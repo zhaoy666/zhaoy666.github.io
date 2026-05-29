@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>About — Yun Yue Zhao, CPA</title>
+<meta name="description" content="The longer story behind the trajectory: biochemistry to audit to Tokyo buy-side to institutional real estate finance at Deloitte." />
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20fill%3D%22%231A3D7C%22%2F%3E%3Ctext%20x%3D%2232%22%20y%3D%2244%22%20font-family%3D%22Georgia%2Cserif%22%20font-size%3D%2234%22%20font-weight%3D%22700%22%20fill%3D%22%23FAFAF7%22%20text-anchor%3D%22middle%22%20letter-spacing%3D%22-1%22%3EYZ%3C%2Ftext%3E%3C%2Fsvg%3E" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --ink: #0B1220;
+    --ink-soft: #1E2638;
+    --accent: #1A3D7C;
+    --accent-soft: #3A5A92;
+    --muted: #5C6473;
+    --paper: #FAFAF7;
+    --paper-warm: #F4F2EC;
+    --rule: #D9DEE6;
+    --rule-soft: #ECEEF2;
+    --font-display: 'Fraunces', Georgia, serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--font-body);
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  body::before {
+    content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 0;
+    background-image: radial-gradient(circle at 20% 10%, rgba(26, 61, 124, 0.04) 0%, transparent 40%);
+  }
+
+  /* NAV */
+  nav.top {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    backdrop-filter: blur(20px) saturate(180%);
+    background: rgba(250, 250, 247, 0.92);
+    border-bottom: 1px solid var(--rule);
+  }
+  nav.top .inner {
+    max-width: 1180px; margin: 0 auto; padding: 1.1rem 2rem;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  nav.top a.brand {
+    font-family: var(--font-display); font-weight: 600; font-size: 1.05rem;
+    color: var(--ink); text-decoration: none; letter-spacing: -0.01em;
+  }
+  nav.top a.brand span { color: var(--muted); font-weight: 400; }
+  nav.top .back {
+    font-size: 0.85rem; color: var(--accent); text-decoration: none;
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    transition: gap 0.25s var(--ease);
+  }
+  nav.top .back:hover { gap: 0.7rem; }
+
+  /* HERO */
+  .about-hero {
+    max-width: 760px; margin: 0 auto; padding: 9rem 2rem 3rem;
+    position: relative; z-index: 1;
+  }
+  .eyebrow {
+    font-family: var(--font-mono); font-size: 0.72rem; text-transform: uppercase;
+    letter-spacing: 0.18em; color: var(--accent); margin-bottom: 1rem;
+  }
+  h1 {
+    font-family: var(--font-display); font-size: clamp(2.4rem, 5vw, 3.8rem);
+    font-weight: 500; line-height: 1.1; letter-spacing: -0.02em; color: var(--ink);
+    font-variation-settings: 'opsz' 100; margin-bottom: 1.25rem;
+  }
+  .lede {
+    font-family: var(--font-display); font-size: 1.35rem; line-height: 1.5;
+    color: var(--ink-soft); font-variation-settings: 'opsz' 30; font-weight: 400;
+    margin-bottom: 2rem;
+  }
+
+  /* LAYOUT — sticky aside + prose */
+  .about-body {
+    max-width: 1180px; margin: 0 auto; padding: 2rem 2rem 5rem;
+    display: grid; grid-template-columns: 220px 1fr; gap: 4rem;
+    position: relative; z-index: 1;
+  }
+  .about-aside { position: sticky; top: 7rem; align-self: start; }
+  .about-aside .kicker {
+    font-family: var(--font-mono); font-size: 0.7rem; text-transform: uppercase;
+    letter-spacing: 0.15em; color: var(--muted); margin-bottom: 1rem;
+  }
+  .about-aside dl { font-size: 0.85rem; }
+  .about-aside dt {
+    font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--muted); margin-top: 0.9rem;
+  }
+  .about-aside dd { color: var(--ink); font-weight: 500; line-height: 1.4; margin-top: 0.2rem; }
+  .about-aside dd em { color: var(--accent); font-style: italic; font-weight: 400; }
+
+  .prose { max-width: 680px; font-size: 1.05rem; line-height: 1.8; color: var(--ink-soft); }
+  .prose > p:first-of-type::first-letter {
+    font-family: var(--font-display); font-size: 4.2rem; font-weight: 600;
+    color: var(--accent); float: left; line-height: 1; padding: 0.3rem 0.8rem 0 0;
+    font-variation-settings: 'opsz' 120;
+  }
+  .prose p { margin-bottom: 1.5rem; }
+  .prose em { font-style: italic; color: var(--ink); }
+
+  .section-divider {
+    margin: 3rem 0 2rem;
+    display: flex; align-items: center; gap: 1.5rem;
+  }
+  .section-divider .num {
+    font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.1em;
+    color: var(--accent); font-weight: 500;
+  }
+  .section-divider .title {
+    font-family: var(--font-display); font-size: 1.4rem; font-weight: 500;
+    color: var(--ink); letter-spacing: -0.01em;
+  }
+  .section-divider .line {
+    flex: 1; height: 1px; background: var(--rule);
+  }
+
+  .pull-quote {
+    margin: 2.5rem 0; padding: 2rem 2.25rem;
+    background: var(--paper-warm); border-left: 3px solid var(--accent);
+    font-family: var(--font-display); font-size: 1.2rem; line-height: 1.5;
+    color: var(--ink); font-variation-settings: 'opsz' 36; font-style: italic;
+  }
+  .pull-quote .attr {
+    display: block; margin-top: 0.75rem; font-size: 0.78rem;
+    font-family: var(--font-body); font-style: normal; color: var(--muted);
+    text-transform: uppercase; letter-spacing: 0.1em;
+  }
+
+  /* CLOSING CTA BAND */
+  .closing {
+    background: var(--ink); color: var(--paper);
+    padding: 5rem 2rem; margin-top: 4rem;
+    position: relative; z-index: 1;
+  }
+  .closing-inner {
+    max-width: 760px; margin: 0 auto; text-align: center;
+  }
+  .closing h2 {
+    font-family: var(--font-display); font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+    font-weight: 500; line-height: 1.2; margin-bottom: 1.25rem;
+    letter-spacing: -0.015em; font-variation-settings: 'opsz' 60;
+  }
+  .closing p {
+    color: rgba(250, 250, 247, 0.75); font-size: 1rem;
+    line-height: 1.65; margin-bottom: 2rem;
+  }
+  .closing-cta {
+    display: inline-flex; gap: 1rem; flex-wrap: wrap; justify-content: center;
+  }
+  .closing-cta a {
+    padding: 0.85rem 1.5rem; font-size: 0.85rem; font-weight: 500;
+    border-radius: 2px; text-decoration: none; transition: all 0.25s var(--ease);
+    border: 1px solid;
+  }
+  .closing-cta a.primary {
+    background: var(--paper); color: var(--ink); border-color: var(--paper);
+  }
+  .closing-cta a.primary:hover { background: var(--accent); color: var(--paper); border-color: var(--accent); }
+  .closing-cta a.ghost {
+    background: transparent; color: var(--paper); border-color: rgba(250, 250, 247, 0.3);
+  }
+  .closing-cta a.ghost:hover { border-color: var(--paper); background: rgba(250, 250, 247, 0.08); }
+
+  footer {
+    padding: 2rem; text-align: center; font-size: 0.78rem; color: var(--muted);
+    position: relative; z-index: 1;
+  }
+
+  @media (max-width: 880px) {
+    .about-body { grid-template-columns: 1fr; gap: 2rem; }
+    .about-aside { position: static; padding: 1.5rem; background: var(--paper-warm); border-radius: 4px; }
+    .about-hero { padding-top: 7rem; }
+  }
+</style>
+</head>
+
+<body>
+
+<nav class="top">
+  <div class="inner">
+    <a href="index.html" class="brand">Yun Yue Zhao<span>, CPA</span></a>
+    <a href="index.html" class="back">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="19" y1="12" x2="5" y2="12"/>
+        <polyline points="12 19 5 12 12 5"/>
+      </svg>
+      Back to portfolio
+    </a>
+  </div>
+</nav>
+
+<section class="about-hero">
+  <div class="eyebrow">About &middot; The long version</div>
+  <h1>A deliberate sequence toward the investment seat.</h1>
+  <p class="lede">
+    Five cities. Three countries. One trajectory &mdash; from a biochemistry lab in Seattle to
+    institutional real estate finance at Deloitte.
+  </p>
+</section>
+
+<div class="about-body">
+
+  <aside class="about-aside">
+    <div class="kicker">At a glance</div>
+    <dl>
+      <dt>Based in</dt>
+      <dd>Costa Mesa, California</dd>
+
+      <dt>Current role</dt>
+      <dd>Senior Consultant<br/><em>Deloitte F&amp;P &middot; Real Estate</em></dd>
+
+      <dt>Credentials</dt>
+      <dd>CPA (CA &amp; CO)<br/>MBA &middot; Waseda<br/>CFA Level III Candidate</dd>
+
+      <dt>Languages</dt>
+      <dd>English &middot; Mandarin &middot; <em>Japanese</em></dd>
+
+      <dt>Destination</dt>
+      <dd>Institutional real estate investment management</dd>
+    </dl>
+  </aside>
+
+  <article class="prose">
+
+    <p>
+      I'm Yun Yue Zhao &mdash; a Senior Consultant in Deloitte's Finance Transformation practice,
+      engaged with a real estate asset management platform at a major global financial institution.
+      My work sits at the intersection of real estate fund finance, operating-model modernization,
+      and the AI-enabled tooling reshaping how institutional investors run their finance functions.
+    </p>
+
+    <p>
+      The trajectory wasn't accidental. Each move was made with the next one already partially in view.
+    </p>
+
+    <div class="section-divider">
+      <span class="num">01</span><span class="title">Foundation</span><span class="line"></span>
+    </div>
+
+    <p>
+      I started at the University of Washington in biochemistry. A foundation in the natural sciences teaches
+      you to read complex systems patiently, to design experiments that isolate variables, and to trust
+      precise measurement over confident assertion. Those are habits I've carried into every chair since.
+    </p>
+
+    <p>
+      The pivot into finance and accounting came during undergrad. I earned a Master of
+      Accountancy at the University of Denver, then secured CPA licenses in California and Colorado
+      &mdash; credentials chosen for the doors they open into analytical, consequential financial work.
+    </p>
+
+    <div class="section-divider">
+      <span class="num">02</span><span class="title">Audit</span><span class="line"></span>
+    </div>
+
+    <p>
+      The next five years were spent in Big 4 audit &mdash; across investment funds, banks,
+      and capital markets clients.
+    </p>
+
+    <p>
+      At Plante Moran, I was an Audit Senior in the investment fund practice &mdash; engagements spanning real
+      estate funds, private equity funds, and alternative investment vehicles. I supervised junior staff,
+      drafted engagement budgets averaging $100K&ndash;$300K, and took on manager-level responsibilities on
+      select engagements ahead of my title. The deeper value of those years wasn't the management
+      reps &mdash; it was the working fluency in fund-level mechanics: capital account roll-forwards,
+      management fee and carried interest calculations, distribution waterfalls, side letter compliance.
+      Mechanics learned by auditing the books and records of dozens of fund vehicles, including real estate,
+      private equity, and alternative investment funds.
+    </p>
+
+    <p>
+      At PwC, I moved into the Banking &amp; Capital Markets practice in Denver, working with financial
+      institutions across credit, real estate lending, and structured finance portfolios. I executed
+      substantive audit procedures on high-risk line items &mdash; loan confirmations, allowance for credit
+      losses, collateral valuations &mdash; and coordinated a 20+ person delivery team across India and
+      Argentina through 24-hour delivery cycles. I built audit automation workflows using Alteryx and
+      PwC's Digital Lab tools, driving efficiency gains of up to 20% across engagements.
+    </p>
+
+    <div class="section-divider">
+      <span class="num">03</span><span class="title">Tokyo</span><span class="line"></span>
+    </div>
+
+    <p>
+      In 2023 I moved to Tokyo for an MBA at Waseda University &mdash; strategic framing, cross-border
+      relationships, and the time to think clearly about where the audit foundation should compound next.
+      The answer that emerged: toward the investment side.
+    </p>
+
+    <p>
+      The MBA was complemented by six months on the hedge fund desk at Asian Technology Advisors &mdash;
+      research on 15+ global companies across semiconductors, technology, and automotive, supporting
+      senior-analyst coverage decisions on portfolios ranging from $200M to $10B AUM. The buy-side seat
+      teaches the inverse of the audit seat: not how financial systems work internally, but how markets
+      <em>price</em> what those systems produce.
+    </p>
+
+    <p>
+      The Tokyo chair also developed the thematic lens I carry into real estate. The AI infrastructure capex
+      cycle I covered &mdash; Asia-Pacific semiconductor leaders, hyperscaler customers &mdash; sits directly
+      upstream of the data center demand drivers now central to digital-infrastructure REIT and data-center
+      investment theses.
+    </p>
+
+    <div class="section-divider">
+      <span class="num">04</span><span class="title">Deloitte &middot; the chair I'm in now</span><span class="line"></span>
+    </div>
+
+    <p>
+      I joined Deloitte's Finance Transformation practice in December 2025. The choice was deliberate.
+    </p>
+
+    <p>
+      The engagement I'm staffed on is a $2M+ annual transformation supporting the real estate asset
+      management platform of a major global financial institution &mdash; direct RE AUM across multiple
+      capital vehicles spanning core through development strategies, with global operations. From that seat
+      I'm contributing to NAV preparation, fund-level reporting, intercompany reconciliations, and capital
+      call / distribution mechanics; helping diagnose and redesign recurring finance processes; identifying
+      and scoping 12 AI and automation use cases with implementation plans for 4 prioritized initiatives;
+      and developing materials for the steering committees governing the transformation roadmap.
+    </p>
+
+    <p>
+      Three things make this seat unusually valuable for where I want to go next.
+    </p>
+
+    <p>
+      First, the technical content is real. I'm working directly alongside the people who run institutional
+      real estate finance &mdash; every conversation about NAV preparation, fund-level reporting, intercompany
+      reconciliations, or capital call mechanics is one I'll have on the other side of the table once
+      I move to an investment seat.
+    </p>
+
+    <p>
+      Second, the AI-enablement work is differentiated. Few traditional REPE candidates have working
+      experience deploying AI in regulated finance contexts; few AI-fluent candidates have real estate
+      domain fluency. The intersection is one institutional platforms are increasingly hiring against.
+    </p>
+
+    <p>
+      Third, the relationships are real. The working relationships I'm building on the investment side of
+      the engagement are the kind of network capital no formal pipeline can replace.
+    </p>
+
+    <div class="section-divider">
+      <span class="num">05</span><span class="title">Beyond</span><span class="line"></span>
+    </div>
+
+    <p>
+      The destination I'm building toward is a senior associate or VP role in institutional real estate
+      investment management &mdash; via internal transition to the investment side of the current platform,
+      or to a comparable institutional RE platform. That's a three-to-five-year build, not a two-year sprint.
+      The development plan is mapped: real estate financial modeling (ARGUS, deal underwriting), sector
+      thesis depth (data centers and industrial), CFA Level III and charter completion, AI differentiation,
+      network capital, and deal-adjacent experience.
+    </p>
+
+    <p>
+      Each year, the picture clarifies. The current chair is the one I'd choose all over again.
+    </p>
+
+    <p>
+      I hold CPA licenses in California and Colorado, an MBA from Waseda University, a Master of Accountancy
+      from the University of Denver, and am pursuing CFA Level III. I work across English, Mandarin, and
+      Japanese, and have lived and worked across the U.S., Japan, and China. I'm based in Costa Mesa, California.
+    </p>
+
+  </article>
+
+</div>
+
+<section class="closing">
+  <div class="closing-inner">
+    <h2>Always open to thoughtful conversations.</h2>
+    <p>If you're working at the intersection of institutional real estate, finance modernization,
+       and AI-enabled investment infrastructure &mdash; or you know someone who is &mdash; I'd love to talk.</p>
+    <div class="closing-cta">
+      <a href="mailto:zhaosunny35@yahoo.com" class="primary">Email me</a>
+      <a href="https://www.linkedin.com/in/yun-yue-zhao-uscpa" target="_blank" rel="noopener" class="ghost">LinkedIn</a>
+      <a href="index.html" class="ghost">Back to portfolio</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  &copy; 2026 Yun Yue Zhao &middot; All rights reserved &middot; Views are my own.
+</footer>
+
+</body>
+</html>
